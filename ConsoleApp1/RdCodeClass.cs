@@ -51,7 +51,7 @@ namespace ConsoleApp1
             };
             var Introduction = salaryService.EditRdCode(rdCodeInfo);
             string json = JsonConvert.SerializeObject(Introduction);
-            Console.WriteLine(json.ToString());
+            Console.WriteLine(json.ToString()); 
         }
 
         public void DeleteRtCode()
