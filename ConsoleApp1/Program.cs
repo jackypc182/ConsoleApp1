@@ -38,7 +38,7 @@ namespace ConsoleApp1
 
             var JsonObject = new
             {
-                text = "有錯誤訊息，請至記錄檔查看。"
+                text = "有錯誤訊息，請至記錄檔查看。" 
             };
             await requestApi.reqPost(Url, JsonObject, "");
 
