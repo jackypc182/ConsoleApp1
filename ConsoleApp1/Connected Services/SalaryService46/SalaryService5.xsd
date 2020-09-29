@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JBHRService.Salary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JBHRService.Salary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" />
+  <xs:complexType name="SalaryChangeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ChageDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateMan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalaryCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalaryChangeInfo" nillable="true" type="tns:SalaryChangeInfo" />
+  <xs:complexType name="SalaryChangeServiceResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalaryChangeServiceResult" nillable="true" type="tns:SalaryChangeServiceResult" />
+  <xs:complexType name="GetRdCodeResult">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" minOccurs="0" name="GetRdCodeInfo" nillable="true" type="q1:ArrayOfRDCODE" />
+      <xs:element minOccurs="0" name="rdCodeSerciveResult" nillable="true" type="tns:RdCodeSerciveResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRdCodeResult" nillable="true" type="tns:GetRdCodeResult" />
+  <xs:complexType name="RdCodeSerciveResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RdCodeSerciveResult" nillable="true" type="tns:RdCodeSerciveResult" />
+  <xs:complexType name="RdCodeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Key_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Key_Man" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RdCodeInfo" nillable="true" type="tns:RdCodeInfo" />
+  <xs:complexType name="GetRdCostResult">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" minOccurs="0" name="GetRdCostInfo" nillable="true" type="q2:ArrayOfRDCOST" />
+      <xs:element minOccurs="0" name="rdCostSerciveResult" nillable="true" type="tns:RdCostSerciveResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRdCostResult" nillable="true" type="tns:GetRdCostResult" />
+  <xs:complexType name="RdCostSerciveResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RdCostSerciveResult" nillable="true" type="tns:RdCostSerciveResult" />
+  <xs:complexType name="RdCostInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmployeeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Key_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Key_Man" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RdCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RdNobrType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UseRatio" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RdCostInfo" nillable="true" type="tns:RdCostInfo" />
+  <xs:complexType name="EditRdCostInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RdCostInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoKey" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditRdCostInfo" nillable="true" type="tns:EditRdCostInfo" />
+  <xs:complexType name="GetRdNobrTypeResult">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" minOccurs="0" name="RdNobrTypeInfo" nillable="true" type="q3:ArrayOfMTCODE" />
+      <xs:element minOccurs="0" name="rdNobrTypeSerciveResult" nillable="true" type="tns:RdNobrTypeServiceResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRdNobrTypeResult" nillable="true" type="tns:GetRdNobrTypeResult" />
+  <xs:complexType name="RdNobrTypeServiceResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RdNobrTypeServiceResult" nillable="true" type="tns:RdNobrTypeServiceResult" />
+</xs:schema>

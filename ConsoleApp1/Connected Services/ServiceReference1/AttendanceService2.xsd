@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34941/AttendanceService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:34941/AttendanceService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JBHRService" />
+  <xs:import schemaLocation="http://localhost:34941/AttendanceService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/JBHR.Sal.Service" />
+  <xs:import schemaLocation="http://localhost:34941/AttendanceService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/JBHRService.Attend" />
+  <xs:element name="TimeTableGenerate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="employeeList" nillable="true" type="q1:ArrayOfstring" />
+        <xs:element minOccurs="0" name="yymm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="generateAttendance" type="xs:boolean" />
+        <xs:element minOccurs="0" name="keyMan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimeTableGenerateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransAttCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JBHRService" minOccurs="0" name="transAttCardEntry" nillable="true" type="q2:TransAttCardEntry" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JBHRService" minOccurs="0" name="transCardConfig" nillable="true" type="q3:TransCardConfig" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JBHR.Sal.Service" minOccurs="0" name="userIdentity" nillable="true" type="q4:UserIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransAttCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JBHRService" minOccurs="0" name="TransAttCardResult" nillable="true" type="q5:TransAttCardResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCount">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="data" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTestResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOtherAttendChange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/JBHRService.Attend" minOccurs="0" name="otherAttendInfo" nillable="true" type="q6:OtherAttendChangeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOtherAttendChangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/JBHRService.Attend" minOccurs="0" name="AddOtherAttendChangeResult" nillable="true" type="q7:OtherAttendChangeServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOtherAttendData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/JBHRService.Attend" minOccurs="0" name="otherAttendInfo" nillable="true" type="q8:OtherAttendChangeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOtherAttendDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/JBHRService.Attend" minOccurs="0" name="CheckOtherAttendDataResult" nillable="true" type="q9:OtherAttendChangeServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

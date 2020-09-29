@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:34941/SalaryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JBHRService" />
+  <xs:import schemaLocation="http://localhost:34941/SalaryService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/JBHRService.Salary" />
+  <xs:element name="SalaryCalculate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JBHRService" minOccurs="0" name="salaryCalculateEntry" nillable="true" type="q1:SalaryCalculateEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalaryCalculateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JBHRService" minOccurs="0" name="SalaryCalculateResult" nillable="true" type="q2:SalaryCalculateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSalaryChange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="salaryInfo" nillable="true" type="q3:SalaryChangeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSalaryChangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="AddSalaryChangeResult" nillable="true" type="q4:SalaryChangeServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSalaryChangeAvailable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="salaryInfo" nillable="true" type="q5:SalaryChangeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSalaryChangeAvailableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="CheckSalaryChangeAvailableResult" nillable="true" type="q6:SalaryChangeServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRdCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRdCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="GetRdCodeResult" nillable="true" type="q7:GetRdCodeResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRdCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="rdCodeInfo" nillable="true" type="q8:RdCodeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRdCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="AddRdCodeResult" nillable="true" type="q9:RdCodeSerciveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditRdCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="rdCodeInfo" nillable="true" type="q10:RdCodeInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditRdCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="EditRdCodeResult" nillable="true" type="q11:RdCodeSerciveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelRdCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelRdCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="DelRdCodeResult" nillable="true" type="q12:RdCodeSerciveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRdCost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rdCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Nobr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRdCostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="GetRdCostResult" nillable="true" type="q13:GetRdCostResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRdCost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="rdCostInfo" nillable="true" type="q14:RdCostInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRdCostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="AddRdCostResult" nillable="true" type="q15:RdCostSerciveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditRdCost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="editRdCostInfo" nillable="true" type="q16:EditRdCostInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditRdCostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="EditRdCostResult" nillable="true" type="q17:RdCostSerciveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelRdCost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AutoKey" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelRdCostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="DelRdCostResult" nillable="true" type="q18:RdCostSerciveResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRdNobrType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRdNobrTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/JBHRService.Salary" minOccurs="0" name="GetRdNobrTypeResult" nillable="true" type="q19:GetRdNobrTypeResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

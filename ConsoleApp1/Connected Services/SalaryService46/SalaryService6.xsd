@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JBHRService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JBHRService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JBHR.Sal.Service" />
+  <xs:import schemaLocation="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SalaryCalculateEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttDateB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AttDateE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="COMPANY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CalIns" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CalcAbs" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CalcOt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CalcTeco" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreateAbs" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InEDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsCalcB" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NonSeq" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OvertimeConfig" nillable="true" type="tns:OvertimeConfig" />
+      <xs:element minOccurs="0" name="SEQ2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalaryConfig" nillable="true" type="tns:SalaryConfig" />
+      <xs:element minOccurs="0" name="TaxConfig" nillable="true" type="tns:TaxConfig" />
+      <xs:element minOccurs="0" name="TransDate" type="xs:dateTime" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JBHR.Sal.Service" minOccurs="0" name="UserIdentity" nillable="true" type="q1:UserIdentity" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="WriteRules" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="date_b" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="date_e" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dept_b" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dept_e" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nobr_b" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nobr_e" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="prev" type="xs:boolean" />
+      <xs:element minOccurs="0" name="seq" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yymm" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalaryCalculateEntry" nillable="true" type="tns:SalaryCalculateEntry" />
+  <xs:complexType name="OvertimeConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FEMALEMAXHRS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MALEMAXHRS" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NOTAXSALCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OTFOODSALCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOTAXSALCODE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OvertimeConfig" nillable="true" type="tns:OvertimeConfig" />
+  <xs:complexType name="SalaryConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATTAWARDSALCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AttEndDay" type="xs:int" />
+      <xs:element minOccurs="0" name="Decimals" type="xs:int" />
+      <xs:element minOccurs="0" name="EATSALCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMPSALCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalEndDay" type="xs:int" />
+      <xs:element minOccurs="0" name="WELPAY" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WELSALCODE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalaryConfig" nillable="true" type="tns:SalaryConfig" />
+  <xs:complexType name="TaxConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TAXSALCODE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxConfig" nillable="true" type="tns:TaxConfig" />
+  <xs:complexType name="SalaryCalculateResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFinish" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalaryCalculateResult" nillable="true" type="tns:SalaryCalculateResult" />
+</xs:schema>

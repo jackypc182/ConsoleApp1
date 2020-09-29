@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AttendanceService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IAttendanceService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JBHRService" />
+      <xsd:import schemaLocation="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/JBHR.Sal.Service" />
+      <xsd:import schemaLocation="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/JBHRService.Attend" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAttendanceService_TimeTableGenerate_InputMessage">
+    <wsdl:part name="parameters" element="tns:TimeTableGenerate" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_TimeTableGenerate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TimeTableGenerateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_TransAttCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransAttCard" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_TransAttCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransAttCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_GetCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCount" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_GetCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_GetTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTest" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_GetTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_AddOtherAttendChange_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOtherAttendChange" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_AddOtherAttendChange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOtherAttendChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_CheckOtherAttendData_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOtherAttendData" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceService_CheckOtherAttendData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOtherAttendDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAttendanceService">
+    <wsdl:operation name="TimeTableGenerate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceService/TimeTableGenerate" message="tns:IAttendanceService_TimeTableGenerate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceService/TimeTableGenerateResponse" message="tns:IAttendanceService_TimeTableGenerate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransAttCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceService/TransAttCard" message="tns:IAttendanceService_TransAttCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceService/TransAttCardResponse" message="tns:IAttendanceService_TransAttCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceService/GetCount" message="tns:IAttendanceService_GetCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceService/GetCountResponse" message="tns:IAttendanceService_GetCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceService/GetTest" message="tns:IAttendanceService_GetTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceService/GetTestResponse" message="tns:IAttendanceService_GetTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOtherAttendChange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceService/AddOtherAttendChange" message="tns:IAttendanceService_AddOtherAttendChange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceService/AddOtherAttendChangeResponse" message="tns:IAttendanceService_AddOtherAttendChange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOtherAttendData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceService/CheckOtherAttendData" message="tns:IAttendanceService_CheckOtherAttendData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceService/CheckOtherAttendDataResponse" message="tns:IAttendanceService_CheckOtherAttendData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAttendanceService" type="tns:IAttendanceService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TimeTableGenerate">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/TimeTableGenerate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransAttCard">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/TransAttCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCount">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/GetCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTest">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/GetTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOtherAttendChange">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/AddOtherAttendChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOtherAttendData">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/CheckOtherAttendData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_IAttendanceService" type="tns:IAttendanceService">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_IAttendanceService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TimeTableGenerate">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/TimeTableGenerate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransAttCard">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/TransAttCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCount">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/GetCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTest">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/GetTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOtherAttendChange">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/AddOtherAttendChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOtherAttendData">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceService/CheckOtherAttendData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AttendanceService">
+    <wsdl:port name="BasicHttpBinding_IAttendanceService" binding="tns:BasicHttpBinding_IAttendanceService">
+      <soap:address location="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_IAttendanceService" binding="tns:BasicHttpsBinding_IAttendanceService">
+      <soap:address location="https://testitserver.jbjob.com.tw/JbhrServiceEMCCN/AttendanceService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

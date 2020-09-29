@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="51638185-6142-4017-a6d5-8a177097bfd7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AttendanceService.xsd" MetadataType="Schema" ID="9c96b14a-a44d-45e2-a1bc-81959354a6db" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AttendanceService1.xsd" MetadataType="Schema" ID="5eb96b31-22c4-408b-adb7-4fb5ce7d48ef" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AttendanceService.wsdl" MetadataType="Wsdl" ID="9c3f5d3a-70cf-4309-be1a-f92c33d4f185" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?wsdl" />
+    <MetadataFile FileName="AttendanceService.disco" MetadataType="Disco" ID="e35b8a7e-008f-4844-af73-c3afed8c3b3a" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?disco" />
+    <MetadataFile FileName="AttendanceService2.xsd" MetadataType="Schema" ID="fa9d6475-30db-4761-a666-9b6ebc9bf6b4" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AttendanceService3.xsd" MetadataType="Schema" ID="d1f13ebf-3bcc-4f52-aa72-cd6871833b0a" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd5" />
+    <MetadataFile FileName="AttendanceService4.xsd" MetadataType="Schema" ID="ca0dc7aa-7c79-4eea-9763-eeadeb971483" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AttendanceService5.xsd" MetadataType="Schema" ID="76a8cc40-52ee-4afd-a116-c6513861e78a" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/AttendanceService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

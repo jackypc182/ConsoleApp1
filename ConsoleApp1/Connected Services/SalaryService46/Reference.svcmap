@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="48a68904-51c2-4a9b-8189-9f31a342684a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalaryService.xsd" MetadataType="Schema" ID="271decc9-cb05-481d-9662-a7b6a33169e5" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?xsd=xsd4" />
+    <MetadataFile FileName="SalaryService1.xsd" MetadataType="Schema" ID="eea9ae36-a03c-43e3-99b3-068707771c63" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SalaryService.wsdl" MetadataType="Wsdl" ID="5607de1f-10c1-4b6f-ba3b-b25e8972e8a3" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?wsdl" />
+    <MetadataFile FileName="SalaryService2.xsd" MetadataType="Schema" ID="27d882a5-d1f7-4002-b1f2-cc9dc732427c" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SalaryService.disco" MetadataType="Disco" ID="7dbf78c7-9792-40c2-a7a7-e0e044add2a0" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?disco" />
+    <MetadataFile FileName="SalaryService3.xsd" MetadataType="Schema" ID="1b4ad0d8-2f04-4b34-8495-3bdb527f0879" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?xsd=xsd6" />
+    <MetadataFile FileName="SalaryService4.xsd" MetadataType="Schema" ID="33c7ad9b-29a5-4f97-9b35-494afe1b56ba" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SalaryService5.xsd" MetadataType="Schema" ID="7f4c962f-afd1-4463-acd8-b33f1e0091be" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?xsd=xsd5" />
+    <MetadataFile FileName="SalaryService6.xsd" MetadataType="Schema" ID="adfc9b1a-31b7-4251-8e6d-ac208fdae218" SourceId="1" SourceUrl="http://192.168.1.46/JbhrServiceEMCCN/SalaryService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

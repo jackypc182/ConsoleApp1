@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JBModule.Data.Linq" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRDCODE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RDCODE" nillable="true" type="tns:RDCODE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRDCODE" nillable="true" type="tns:ArrayOfRDCODE" />
+  <xs:complexType name="RDCODE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Key_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Key_Man" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RDCODE" nillable="true" type="tns:RDCODE" />
+  <xs:complexType name="ArrayOfRDCOST">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RDCOST" nillable="true" type="tns:RDCOST" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRDCOST" nillable="true" type="tns:ArrayOfRDCOST" />
+  <xs:complexType name="RDCOST">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutoKey" type="xs:int" />
+      <xs:element minOccurs="0" name="Nobr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RdNobrType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RdCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UseRatio" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DateB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Key_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Key_Man" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Serno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RDCOST" nillable="true" type="tns:RDCOST" />
+  <xs:complexType name="ArrayOfMTCODE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MTCODE" nillable="true" type="tns:MTCODE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMTCODE" nillable="true" type="tns:ArrayOfMTCODE" />
+  <xs:complexType name="MTCODE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SORT" type="xs:int" />
+      <xs:element minOccurs="0" name="DISPLAY" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MTCODE" nillable="true" type="tns:MTCODE" />
+</xs:schema>

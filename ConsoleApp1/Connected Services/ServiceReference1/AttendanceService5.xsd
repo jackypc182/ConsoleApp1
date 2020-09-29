@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JBHRService.Attend" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JBHRService.Attend" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="OtherAttendChangeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BDATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BTIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EDATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ETIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KEY_MAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USEMIN" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OtherAttendChangeInfo" nillable="true" type="tns:OtherAttendChangeInfo" />
+  <xs:complexType name="OtherAttendChangeServiceResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OtherAttendChangeServiceResult" nillable="true" type="tns:OtherAttendChangeServiceResult" />
+</xs:schema>
