@@ -16,7 +16,7 @@ namespace ConsoleApp1
             var Introduction = salaryService.GetRdCode();
             string json = JsonConvert.SerializeObject(Introduction);
             Console.WriteLine(json.ToString());
-        } 
+        }
 
         public void AddRtCode()
         {
