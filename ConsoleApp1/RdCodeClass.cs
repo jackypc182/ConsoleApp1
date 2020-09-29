@@ -11,7 +11,7 @@ namespace ConsoleApp1
     class RdCodeClass
     {
         public void GetRtCode()
-        {
+        { 
             ISalaryService salaryService = new SalaryServiceClient();
             var Introduction = salaryService.GetRdCode();
             string json = JsonConvert.SerializeObject(Introduction);
